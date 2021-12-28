@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuang.dao.RoomMapper">
+
+    <insert id="addRoom" parameterType="Room">
+        insert into room (contact,title,description,price,deposit,`state`,area,createtime,latitude,longitude)
+        value (#{contact}, #{title}, #{description}, #{price}, #{deposit}, #{state}, #{area}, #{createtime}, #{latitude}, #{longitude});
+    </insert>
+
+    <select id="queryAllRoom" resultType="Room">
+        select * from room;
+    </select>
+
+</mapper>
